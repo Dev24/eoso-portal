@@ -1,0 +1,22 @@
+
+.header-section {
+    height: 50px;
+}
+
+.left-section {
+}
+
+.main-section {
+    
+}
+.main-section div{
+    border: 1px dotted #eee;
+}
+
+.footer-section {
+    background-color: #eee;
+}
+
+.section{
+    padding: 4px;
+}
