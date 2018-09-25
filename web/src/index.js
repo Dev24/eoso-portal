@@ -14,23 +14,22 @@ import reducers from './reducers';
 import PostIndex from './components/posts_index';
 import PostNew from './components/posts_new';
 
-
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 ReactDOM.render(
-    <TemplateMain>
-        <Provider store={createStoreWithMiddleware(reducers)}>
+    <Provider store={createStoreWithMiddleware(reducers)}>
         <BrowserRouter>
-            <Switch>
-            <Route path="/posts/new" component={PostNew}/>
-            <Route path="/" component={PostIndex}/>
-            </Switch>
+            <TemplateMain>
+                <Switch>
+                    <Route path="/posts/new" component={PostNew}/>
+                    <Route path="/" component={PostIndex}/>
+                </Switch>
+            </TemplateMain>
         </BrowserRouter>
-        </Provider>
-    </TemplateMain>
+    </Provider>
     , document.getElementById('root'));
   
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+//ReactDOM.render(<App />, document.getElementById('root'));
 //registerServiceWorker();

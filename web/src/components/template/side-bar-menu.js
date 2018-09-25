@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import SideMenu, {Item} from 'react-sidemenu';
-import './side-bar2.css'
+import './side-bar-menu.css'
+import { withRouter } from "react-router-dom";
 
-export default class SideBar2 extends Component {
+class SideBarMenu extends Component {
 
     render(){
         const items = [
-          {divider: true, label: 'Main navigation', value: 'main-nav'},
-          {label: 'item 1', value: 'item1', icon: 'fa-search',
+          {divider: true, label: 'Posts', value: 'main-nav'},
+          {label: 'List Posts', value: 'post_index', icon: 'fa-search', 
+            onClick: ()=>{this.props.history.push('/');} },
+          {label: 'Create Posts', value: 'post_new', icon: 'fa-search',
+            onClick: ()=>{this.props.history.push('/posts/new');} },
+          {label: 'Sub Menu', value: 'item1', icon: 'fa-search',
           children: [
             {label: 'item 1.1', value: 'item1.1', icon: 'fa-snapchat',
             children: [
@@ -51,3 +56,5 @@ export default class SideBar2 extends Component {
         */
     }
 }
+
+export default withRouter(SideBarMenu);

@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "font-awesome": "^4.7.0",
+    "history": "^4.7.2",
     "lodash": "^4.17.11",
     "react": "^16.5.2",
     "react-burger-menu": "^2.5.2",

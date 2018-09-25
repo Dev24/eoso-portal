@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Header from './header';
 import Footer from './footer';
 //import SideBar from './side-bar';
-import SideBar2 from './side-bar2';
+import SideBarMenu from './side-bar-menu';
 import './template_main.css'
 
 
@@ -18,7 +18,7 @@ export default class TemplateMain extends Component {
             
                 <div className="row">
                     <div className="col-md-3 left-section section">
-                        <SideBar2 />
+                        <SideBarMenu />
                     </div>
                     <div className="col-md-9 main-section section">
                         {this.props.children}
